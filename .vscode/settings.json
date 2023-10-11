@@ -1,0 +1,8 @@
+{
+    "editor.fontSize": 16,
+    "javascript.autoClosingTags": true,
+    "editor.formatOnSave": true,
+    "scss.completion.completePropertyWithSemicolon": true,
+    "css.completion.completePropertyWithSemicolon": true
+    
+}

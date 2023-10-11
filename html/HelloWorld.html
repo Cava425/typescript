@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <script src="https://unpkg.com/vue@next"></script>
+    <!-- import CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-plus/dist/index.css">
+    <!-- import JavaScript -->
+    <script src="https://unpkg.com/element-plus"></script>
+    <title>Element Plus demo</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="flex-container">
+        <div class="flex-box">
+            <span>A</span>
+        </div>
+        <div class="flex-box">
+            <span>B</span>
+        </div>
+        <div class="flex-box">
+            <span>C</span>
+        </div>
+        <div class="flex-box">
+            <span>D</span>
+        </div>
+        <p>东</p>
+        <p>南</p>
+        <p>西</p>
+        <p>北</p>
+      </div>
+    </div>
+    
+  </body>
+
+  <script>
+    const App = {
+      data() {
+        return {
+          message: "Hello Element Plus",
+        };
+      },
+    };
+    const app = Vue.createApp(App);
+    app.use(ElementPlus);
+    app.mount("#app");
+  </script>
+
+  <style>
+    body {
+        margin: 0;
+    }
+
+    .flex-container {
+        width: 100%;
+        height: 100vh;
+        background-color: dimgray;
+
+        display: flex;
+        flex-direction: row;
+        gap: 5px 10px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .flex-box {
+        width: 45px;
+        height: 45px;
+        background-color: lightblue;
+
+        text-align: center;
+        line-height: 45px;
+    }
+  </style>
+</html>
