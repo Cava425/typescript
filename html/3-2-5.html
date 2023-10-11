@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <script src="https://unpkg.com/vue@next"></script>
+    <!-- import CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/element-plus/dist/index.css"
+    />
+    <!-- import JavaScript -->
+    <script src="https://unpkg.com/element-plus"></script>
+    <title>Element Plus demo</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="box">
+        <p class="content">{{ message }}</p>
+      </div>
+      <!-- 按钮 -->
+      <p><el-button @click="moreContent">更多文字</el-button></p>
+    </div>
+  </body>
+
+  <script>
+    const { createApp, ref } = Vue;
+
+    const App = {
+      setup() {
+        const message = ref("文字内容");
+
+        const moreContent = () => {
+          message.value += "-新增文字";
+        };
+
+        return {
+          message,
+          moreContent,
+        };
+      },
+    };
+    const app = Vue.createApp(App);
+    app.use(ElementPlus);
+    app.mount("#app");
+  </script>
+
+  <style>
+    body {
+      margin: 0;
+    }
+
+    .box {
+      padding: 10px;
+      background-color: #cd0000;
+      text-align: center;
+    }
+    .content {
+      display: inline-block;
+      text-align: left;
+    }
+  </style>
+</html>
